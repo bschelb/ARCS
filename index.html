@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI & Robotics for Collaborative Systems Lab | University of Tennessee</title>
+  <meta name="description" content="Official webpage for the AI & Robotics for Collaborative Systems (ARCS) Lab at the University of Tennessee, Knoxville – advancing human‑AI teaming and intelligent collaborative systems.">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ut-orange:#ff8200;
+      --dark:#1e1e1e;
+      --light:#fafafa;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif;scroll-behavior:smooth;}
+    body{background:var(--light);color:var(--dark);line-height:1.6;}
+    /* Navigation */
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:1000;}
+    .nav-container{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:1rem;}
+    .brand{font-size:1.25rem;font-weight:700;color:var(--ut-orange);}  
+    nav ul{list-style:none;display:flex;gap:1rem;}
+    nav a{color:var(--dark);text-decoration:none;font-weight:500;transition:color .2s;}
+    nav a:hover{color:var(--ut-orange);}    
+    /* Mobile */
+    .hamburger{display:none;flex-direction:column;cursor:pointer;}
+    .hamburger span{height:3px;width:25px;background:var(--dark);margin:4px 0;transition:all .3s ease;}
+    @media(max-width:768px){
+      nav ul{position:absolute;top:64px;left:0;width:100%;flex-direction:column;background:#fff;border-top:1px solid #e5e7eb;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+      nav ul.show{max-height:400px;}
+      .hamburger{display:flex;}
+    }
+    /* Hero */
+    .hero{background:url('https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;}
+    .hero h1{font-size:2.5rem;margin-bottom:.5rem;text-shadow:0 2px 4px rgba(0,0,0,.4);}  
+    .hero p{font-size:1.125rem;max-width:700px;margin:auto;text-shadow:0 1px 3px rgba(0,0,0,.4);}  
+    /* Sections */
+    section{padding:4rem 1rem;max-width:1100px;margin:auto;}
+    h2{font-size:2rem;color:var(--ut-orange);margin-bottom:1.5rem;text-align:center;}
+    .grid{display:grid;gap:2rem;}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1.5rem;transition:transform .2s,box-shadow .2s;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 4px 12px rgba(0,0,0,.1);}  
+    /* People */
+    .people{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;}
+    .person{background:#fff;border:1px solid #e5e7eb;border-radius:8px;width:260px;text-align:center;padding:1.5rem;}
+    .person img{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:1rem;}
+    /* Footer */
+    footer{background:#f3f4f6;padding:2rem 1rem;text-align:center;font-size:.9rem;color:#4b5563;}
+    footer a{color:var(--ut-orange);text-decoration:none;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <div class="brand">ARCS Lab @ UT</div>
+      <nav>
+        <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+        <ul id="navMenu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#people">People</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#opportunities">Opportunities</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>AI & Robotics for Collaborative Systems Lab</h1>
+      <p>Advancing human‑AI teaming and ethical, trustworthy collaborative systems to enhance performance and safety across manufacturing, healthcare, defense, and beyond.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About the Lab</h2>
+    <p>The AI and Robotics for Collaborative Systems (ARCS) Lab is a human factors research group in the Department of Industrial &amp; Systems Engineering at the University of Tennessee, Knoxville. We research, design, and promote effective collaboration between humans and intelligent machines to achieve society&rsquo;s goals. Our work draws from cognitive science, human‑computer interaction, and systems engineering to develop <strong>responsible</strong> AI teammates that foster trust, shared mental models, and situational awareness. <br><br>Application domains include advanced manufacturing, healthcare, emergency response, defense training, and education.<br><br><em>— Dr. Beau Schelble, Founding Director</em></p>
+  </section>
+
+  <!-- Research Areas -->
+  <section id="research">
+    <h2>Research Areas</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Human‑AI Teaming</h3><p>Modeling information‑sharing, team cognition, and workload to create synergistic human–machine partnerships.</p></div>
+      <div class="card"><h3>Trust &amp; Ethics</h3><p>Designing transparent AI behaviors and ethical shared mental models that calibrate trust and mitigate compromised teammates.</p></div>
+      <div class="card"><h3>Training Transference</h3><p>Improving virtual‑to‑physical skill transference through intelligent interventions and psychological fidelity.</p></div>
+      <div class="card"><h3>Situational Awareness</h3><p>Real‑time adaptive interfaces that surface mission‑critical cues and promote collective understanding.</p></div>
+      <div class="card"><h3>Applied Robotics</h3><p>Integrating collaborative robots and unmanned ground vehicles into manufacturing and emergency scenarios.</p></div>
+      <div class="card"><h3>Evaluation &amp; Validation</h3><p>Developing rigorous experimental frameworks to test AI teammates’ effectiveness, safety, and resilience.</p></div>
+    </div>
+  </section>
+
+  <!-- People -->
+  <section id="people">
+    <h2>People</h2>
+    <div class="people">
+      <div class="person">
+        <img src="https://avatars.githubusercontent.com/u/1" alt="Director Portrait">
+        <h3>Dr. Beau Schelble</h3>
+        <p>Assistant Professor &amp; Lab Director<br>Human‑AI Teaming • Ethical AI • Team Cognition</p>
+        <a href="mailto:bschelbl@utk.edu">Email</a> | <a href="https://scholar.google.com" target="_blank">Scholar</a>
+      </div>
+      <div class="person">
+        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Placeholder">
+        <h3>Your Name Here</h3>
+        <p>Graduate Research Assistant<br>Interests: TBD</p>
+      </div>
+      <div class="person">
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80" alt="Placeholder">
+        <h3>Your Name Here</h3>
+        <p>Undergraduate Researcher<br>Interests: TBD</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications">
+    <h2>Recent Publications</h2>
+    <ul>
+      <li><strong>Schelble, B.</strong>, &amp; Colleagues (2024). <em>A Comparative Evaluation of Ad Hoc Team Performance, Effectiveness, and Interactions in Modern Collaborative Technology.</em> Journal of Collaborative Computing.</li>
+      <li><strong>Schelble, B.</strong>, &amp; Colleagues (2024). <em>Modeling Perceived Information Needs in Human‑AI Teams: Improving AI Teammate Utility and Driving Team Cognition.</em> Proceedings of the Human Factors &amp; Ergonomics Society.</li>
+    </ul>
+    <p>See all publications on <a href="https://scholar.google.com" target="_blank">Google Scholar</a>.</p>
+  </section>
+
+  <!-- Opportunities -->
+  <section id="opportunities">
+    <h2>Join the Lab</h2>
+    <p>We are actively recruiting motivated graduate and undergraduate students interested in human‑AI collaboration, robotics, and cognitive engineering. Prospective students should email Dr. Schelble with a CV and brief statement of research interests.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>ARCS Lab – Industrial &amp; Systems Engineering</strong><br>
+    John D. Tickle Engineering Building<br>
+    851 Neyland Drive, Knoxville, TN 37996‑2315<br>
+    Email: <a href="mailto:bschelbl@utk.edu">bschelbl@utk.edu</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> AI &amp; Robotics for Collaborative Systems Lab, University of Tennessee, Knoxville. All rights reserved.</p>
+    <p>This site is built with ❤ and hosted via <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    function toggleMenu(){document.getElementById('navMenu').classList.toggle('show');}
+    // Update copyright year
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
